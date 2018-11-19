@@ -16,6 +16,7 @@ $('document').ready(function(){
 
 				if(result.status == "success"){
 					alert('가입이 완료되었습니다!');			
+					location.href = "signIn.html";
 				}else if(result.status == "usedId"){
 					alert('이미 사용중인 아이디입니다.');
 				}else{

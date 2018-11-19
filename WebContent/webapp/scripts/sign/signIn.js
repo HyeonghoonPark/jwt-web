@@ -15,6 +15,26 @@ $("document").ready(function(){
 			success : function(result){
 				
 				if(result.status=='success'){
+					$.cookie('SESSION_USER_ID', 'hyeonghoon', {
+				        expires: 1,	// 1일 보관
+				        path: '/'
+				    });
+					$.cookie('SESSION_USER_NAME', '박형훈', {
+				        expires: 1,	// 1일 보관
+				        path: '/'
+				    });
+					$.cookie('SESSION_CHECK_ID', '1', {
+				        expires: 1,	// 1일 보관
+				        path: '/'
+				    });
+					$.cookie('SESSION_POST_NAME', '컨버전스연구소', {
+				        expires: 1,	// 1일 보관
+				        path: '/'
+				    });
+					$.cookie('SESSION_GD_NAME', '사원', {
+				        expires: 1,	// 1일 보관
+				        path: '/'
+				    });
 					location.href = '../main/main.html'
 				}else if(result.status='NotFindUser'){
 					alert('아이디 혹은 비밀번호가 일치하지 않습니다.');
